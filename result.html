@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibe Analysis - VibeCheck.BNB</title>
+    <meta name="description" content="AI-powered analysis of your blockchain transaction, token, or NFT contract.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-wave-square"></i>
+                <span>VibeCheck.BNB</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Result Page Content -->
+    <main class="result-main">
+        <!-- Back Button -->
+        <div class="result-container">
+            <button class="back-btn" onclick="window.location.href='index.html'">
+                <i class="fas fa-arrow-left"></i>
+                <span>Check Another</span>
+            </button>
+
+            <!-- Status Banner -->
+            <div class="status-banner" id="statusBanner">
+                <div class="status-badge" id="statusBadge">
+                    <span class="status-icon">🟢</span>
+                    <span class="status-text">Chill</span>
+                </div>
+                <div class="status-info">
+                    <div class="status-title" id="statusTitle">This looks good</div>
+                    <div class="status-subtitle" id="statusSubtitle">Analysis completed in 1.8s</div>
+                </div>
+            </div>
+
+            <!-- Main Explanation Card -->
+            <div class="card main-card">
+                <div class="card-header">
+                    <h2 class="card-title">
+                        <i class="fas fa-book-open"></i>
+                        What Happened (In Simple Words)
+                    </h2>
+                </div>
+                <div class="card-content">
+                    <p class="explanation-text" id="explanationText">
+                        This transaction sent 0.5 BNB from your wallet to a new token contract that has only existed for 2 hours and has no verified source code.
+                    </p>
+                    <div class="transaction-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Transaction Hash:</span>
+                            <span class="detail-value" id="txHash">0x7a8f9b...</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Block:</span>
+                            <span class="detail-value" id="blockNumber">34,567,890</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Timestamp:</span>
+                            <span class="detail-value" id="timestamp">2 hours ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Safety Insights Card -->
+            <div class="card safety-card">
+                <div class="card-header">
+                    <h2 class="card-title">
+                        <i class="fas fa-shield-alt"></i>
+                        Safety Insights
+                    </h2>
+                </div>
+                <div class="card-content">
+                    <div class="insights-grid">
+                        <!-- Token Age -->
+                        <div class="insight-item">
+                            <div class="insight-icon icon-warning">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="insight-content">
+                                <h3 class="insight-title">Token Age</h3>
+                                <p class="insight-value">2 hours old</p>
+                                <p class="insight-desc">Very new token. Higher risk of volatility.</p>
+                            </div>
+                        </div>
+
+                        <!-- Liquidity Status -->
+                        <div class="insight-item">
+                            <div class="insight-icon icon-caution">
+                                <i class="fas fa-tint"></i>
+                            </div>
+                            <div class="insight-content">
+                                <h3 class="insight-title">Liquidity Status</h3>
+                                <p class="insight-value">$12,500 locked</p>
+                                <p class="insight-desc">Low liquidity. May be difficult to sell.</p>
+                            </div>
+                        </div>
+
+                        <!-- Ownership Risks -->
+                        <div class="insight-item">
+                            <div class="insight-icon icon-warning">
+                                <i class="fas fa-user-shield"></i>
+                            </div>
+                            <div class="insight-content">
+                                <h3 class="insight-title">Ownership</h3>
+                                <p class="insight-value">Centralized</p>
+                                <p class="insight-desc">Owner can modify contract. Risk of rug pull.</p>
+                            </div>
+                        </div>
+
+                        <!-- Source Code -->
+                        <div class="insight-item">
+                            <div class="insight-icon icon-danger">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="insight-content">
+                                <h3 class="insight-title">Source Code</h3>
+                                <p class="insight-value">Unverified</p>
+                                <p class="insight-desc">Contract code not verified on BscScan.</p>
+                            </div>
+                        </div>
+
+                        <!-- Similar Patterns -->
+                        <div class="insight-item">
+                            <div class="insight-icon icon-warning">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="insight-content">
+                                <h3 class="insight-title">Historical Pattern</h3>
+                                <p class="insight-value">23 similar cases</p>
+                                <p class="insight-desc">Similar contracts had issues within 48h.</p>
+                            </div>
+                        </div>
+
+                        <!-- Holder Analysis -->
+                        <div class="insight-item">
+                            <div class="insight-icon icon-caution">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="insight-content">
+                                <h3 class="insight-title">Holder Analysis</h3>
+                                <p class="insight-value">156 holders</p>
+                                <p class="insight-desc">Top 3 holders control 78% of supply.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Risk Summary -->
+                    <div class="risk-summary">
+                        <div class="risk-header">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <h3>Risk Summary</h3>
+                        </div>
+                        <ul class="risk-list">
+                            <li><strong>High Risk:</strong> Unverified contract with centralized ownership</li>
+                            <li><strong>Medium Risk:</strong> Very low liquidity and extreme holder concentration</li>
+                            <li><strong>Medium Risk:</strong> Token is less than 24 hours old</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vibe Summary Card -->
+            <div class="card vibe-card">
+                <div class="card-header">
+                    <h2 class="card-title">
+                        <i class="fas fa-heart"></i>
+                        The Vibe
+                    </h2>
+                </div>
+                <div class="card-content">
+                    <div class="vibe-content">
+                        <div class="vibe-quote">
+                            <i class="fas fa-quote-left quote-icon"></i>
+                            <p class="vibe-text" id="vibeText">
+                                This contract feels rushed and opaque. The combination of no source code verification, 
+                                centralized ownership, and extremely low liquidity creates a high-risk environment. 
+                                Similar patterns have led to rug pulls in the past. 
+                                <strong>Proceed with extreme caution or avoid entirely.</strong>
+                            </p>
+                        </div>
+                        
+                        <div class="vibe-meter">
+                            <div class="meter-label">Risk Level</div>
+                            <div class="meter-bar">
+                                <div class="meter-fill" id="meterFill" style="width: 75%"></div>
+                            </div>
+                            <div class="meter-labels">
+                                <span>Safe</span>
+                                <span>Risky</span>
+                            </div>
+                        </div>
+
+                        <div class="vibe-recommendation">
+                            <i class="fas fa-lightbulb"></i>
+                            <div>
+                                <strong>Our Recommendation:</strong> Wait at least 48 hours and monitor for: 
+                                source code verification, liquidity increases, and holder distribution improvements.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-section">
+                <h3 class="action-title">What's Next?</h3>
+                <div class="action-buttons">
+                    <a href="https://bscscan.com" target="_blank" rel="noopener" class="btn btn-secondary">
+                        <i class="fas fa-external-link-alt"></i>
+                        <span>View on BscScan</span>
+                    </a>
+                    <button class="btn btn-secondary" id="shareBtn">
+                        <i class="fas fa-share-alt"></i>
+                        <span>Share Vibe</span>
+                    </button>
+                    <button class="btn btn-primary" id="deeperCheckBtn">
+                        <i class="fas fa-search-plus"></i>
+                        <span>Run Deeper Check</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Similar Checks -->
+            <div class="similar-section">
+                <h3 class="similar-title">Similar Checks You Might Like</h3>
+                <div class="similar-grid">
+                    <div class="similar-card">
+                        <div class="similar-badge badge-chill">🟢 Chill</div>
+                        <h4>PancakeSwap Router</h4>
+                        <p>Verified DEX contract with 2+ years history</p>
+                    </div>
+                    <div class="similar-card">
+                        <div class="similar-badge badge-caution">🟡 Caution</div>
+                        <h4>New Gaming Token</h4>
+                        <p>1 week old, moderate liquidity, growing community</p>
+                    </div>
+                    <div class="similar-card">
+                        <div class="similar-badge badge-chill">🟢 Chill</div>
+                        <h4>BNB Transfer</h4>
+                        <p>Simple wallet-to-wallet BNB transfer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <i class="fas fa-wave-square"></i>
+                    <span>VibeCheck.BNB</span>
+                </div>
+                <p class="footer-tagline">Making blockchain human-readable</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Product</h4>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="result.html">Demo</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <a href="https://bscscan.com" target="_blank" rel="noopener">BscScan</a>
+                    <a href="https://www.bnbchain.org" target="_blank" rel="noopener">BNB Chain</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <a href="#" target="_blank" rel="noopener"><i class="fab fa-twitter"></i> Twitter</a>
+                    <a href="#" target="_blank" rel="noopener"><i class="fab fa-discord"></i> Discord</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 VibeCheck.BNB. All rights reserved.</p>
+            <p>Built with clarity and care for the Web3 community</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VibeCheck.BNB - AI-Powered Blockchain Intelligence</title>
+    <meta name="description" content="Don't just read the blockchain. Check the vibe. An AI-powered guide that turns BNB Chain transactions and tokens into human-readable stories and safety insights.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-wave-square"></i>
+                <span>VibeCheck.BNB</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="landing-main">
+        <div class="hero-section">
+            <div class="hero-content">
+                <!-- Badge -->
+                <div class="hero-badge">
+                    <i class="fas fa-sparkles"></i>
+                    <span>AI-Powered Blockchain Intelligence</span>
+                </div>
+
+                <!-- Main Heading -->
+                <h1 class="hero-title">
+                    Don't just read the blockchain.<br>
+                    <span class="gradient-text">Check the vibe.</span>
+                </h1>
+
+                <!-- Subtext -->
+                <p class="hero-subtext">
+                    An AI-powered guide that turns BNB Chain transactions and tokens<br class="desktop-only">
+                    into human-readable stories and safety insights.
+                </p>
+
+                <!-- Input Section -->
+                <div class="hero-input-section">
+                    <div class="input-wrapper">
+                        <i class="fas fa-search input-icon"></i>
+                        <input 
+                            type="text" 
+                            id="blockchainInput"
+                            class="hero-input" 
+                            placeholder="Paste a transaction hash, token address, or NFT contract…"
+                            autocomplete="off"
+                        >
+                        <button class="clear-btn" id="clearBtn" aria-label="Clear input">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="input-hint">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Supports transaction hashes (0x...), token addresses, and NFT contracts</span>
+                    </div>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="hero-cta">
+                    <button class="btn btn-primary" id="checkVibeBtn">
+                        <span>Check the Vibe</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button class="btn btn-secondary" id="tryDemoBtn">
+                        <i class="fas fa-play-circle"></i>
+                        <span>Try a Demo</span>
+                    </button>
+                </div>
+
+                <!-- Stats Section -->
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-value">10,000+</div>
+                        <div class="stat-label">Vibes Checked</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-value">99.9%</div>
+                        <div class="stat-label">Accuracy Rate</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-value">< 2s</div>
+                        <div class="stat-label">Analysis Time</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Decorative Elements -->
+            <div class="hero-decoration">
+                <div class="floating-card card-1">
+                    <div class="card-badge badge-chill">🟢 Chill</div>
+                    <div class="card-text">Verified contract with strong liquidity</div>
+                </div>
+                <div class="floating-card card-2">
+                    <div class="card-badge badge-caution">🟡 Caution</div>
+                    <div class="card-text">New token, proceed carefully</div>
+                </div>
+                <div class="floating-card card-3">
+                    <div class="card-badge badge-risky">🔴 Risky</div>
+                    <div class="card-text">Unverified contract detected</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <section class="features-section">
+            <div class="features-header">
+                <h2 class="section-title">Why VibeCheck?</h2>
+                <p class="section-subtitle">We turn blockchain chaos into calm clarity</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3 class="feature-title">Human-Readable Stories</h3>
+                    <p class="feature-text">No more cryptic hashes and confusing fields. We explain what actually happened in plain English.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Safety Insights</h3>
+                    <p class="feature-text">Instant analysis of token age, liquidity, ownership risks, and potential red flags.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="feature-title">AI-Powered Analysis</h3>
+                    <p class="feature-text">Advanced AI evaluates patterns, contract behavior, and historical data to give you the real vibe.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="feature-title">Calm Interface</h3>
+                    <p class="feature-text">Beautiful, stress-free design that makes blockchain feel accessible, not intimidating.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="feature-title">Lightning Fast</h3>
+                    <p class="feature-text">Get comprehensive insights in under 2 seconds. No waiting, just instant clarity.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Mobile-First</h3>
+                    <p class="feature-text">Check vibes on the go. Fully responsive design that works beautifully on any device.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to understand your blockchain?</h2>
+                <p class="cta-text">Join thousands of users who've found clarity in the chaos</p>
+                <button class="btn btn-primary btn-large" id="ctaCheckBtn">
+                    <span>Start Checking Vibes</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <i class="fas fa-wave-square"></i>
+                    <span>VibeCheck.BNB</span>
+                </div>
+                <p class="footer-tagline">Making blockchain human-readable</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Product</h4>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="#" id="demoLink">Demo</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <a href="https://bscscan.com" target="_blank" rel="noopener">BscScan</a>
+                    <a href="https://www.bnbchain.org" target="_blank" rel="noopener">BNB Chain</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <a href="#" target="_blank" rel="noopener"><i class="fab fa-twitter"></i> Twitter</a>
+                    <a href="#" target="_blank" rel="noopener"><i class="fab fa-discord"></i> Discord</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 VibeCheck.BNB. All rights reserved.</p>
+            <p>Built with clarity and care for the Web3 community</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
